@@ -1,0 +1,31 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Web Component Container</title>
+  </head>
+  <body>
+    <script type="text/javascript" async="true">
+      //clear variable
+      window.webComponent = {};
+      window.webComponentAsyncInit = function() {
+        window.webComponent.init({
+          title: "Hello Component",
+          number: 1,
+          urlPayment: "https://basbdsad.com",
+          dispatchFunction: count => (document.title = `You clicked ${count}`)
+        });
+      };
+    </script>
+    <script type="text/javascript" async="true">
+      (function(d, url) {
+        var s = d.createElement("script");
+        s.src = url + "bundle.js";
+        d.body.appendChild(s);
+      })(document, "http://localhost:3333/");
+    </script>
+
+    <div id="myapp"></div>
+  </body>
+</html>
